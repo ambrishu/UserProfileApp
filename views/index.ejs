@@ -1,0 +1,57 @@
+<html>
+<head>
+<link rel="stylesheet" href="/stylesheets/userProfile_1.css">
+</head>
+
+<body ng-app="myapp">
+
+<div ng-controller="MyController" class="mainContainer">
+   
+    <form ng-submit="submitForm()">
+			<div class="formContainer">
+				<div class="vertical">
+					<p class="form_text">You can enter your Login Details here</p>
+				</div>
+				<div class="vertical">
+					<div id="error_message" class="hide"> <p class="error_text" >Please enter your correct User ID and Password </p>
+					</div>
+				</div>
+				<div class="vertical">
+					<div class="horizontal">
+						<Login>ID :</Login>
+					</div>
+					<div class="horizontal_item">
+						<input type="text" ng-model="myForm.loginid" size="8">
+					</div>
+				</div>
+				<div class="vertical">
+					<div class="horizontal"> Password
+					</div>
+					<div class="horizontal_item">
+						<input type="password" ng-model="myForm.password" size="8">
+					</div>
+				</div>
+				<div class="vertical">
+					<div class="buttonArea">
+						<a href="/registration">click here for Registration</a>
+					</div>
+				</div>
+				<div class="vertical_button">
+					<div class="buttonArea">
+						<div class="horizontal"> 
+						</div>
+						<div class="horizontal">
+							<input type="submit" value="Submit">
+						</div>
+					</div>
+				</div>
+			</div>
+			</form>
+			 <div>
+        {{myForm.loginid}} {{myForm.password}}
+    </div>
+		</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+<script src="/javascripts/AppCtrl.js"></script>
+</body>
+</html>

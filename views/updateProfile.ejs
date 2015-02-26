@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+   <head>
+      <link rel="stylesheet" href="/stylesheets/userProfile_1.css">
+   </head>
+   <body>
+      <div class="mainContainer" ng-controller="updateProfile" ng-init="init()">
+         <form ng-submit="submitUpdateProfle()">
+            <div class="formContainer">
+				<div class="vertical">
+				   <p class="form_text">You can enter your Details here</p>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal">
+					  <first>Name Here :</first>
+				   </div>
+				   <div class="horizontal_item"><input type="text" ng-model="myForm.firstName" value="" size="10">
+				   </div>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal"> Last name</div>
+				   <div class="horizontal_item"><input type="text" ng-model="myForm.lastName" value="" size="10"></div>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal"> Email Address</div>
+				   <div class="horizontal_item"><input type="text" ng-model="myForm.emailID" value="" size="10"></div>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal"> Mobile Number</div>
+				   <div class="horizontal_item"><input type="text" ng-model="myForm.mobileNumber" value="" size="10"></div>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal"> Current  Photo <img src='./img/{{myForm.imagePath}}' style='width:40px;height:40px'/></div>
+				   <div class="horizontal_item"><input type="file" name= "file" ng-model="myForm.image" value=""  onchange="angular.element(this).scope().uploadFile(this.files)"></div>
+				</div>
+				<div class="vertical_loginarea">
+				   <div class="loginArea">
+					  <div class="horizontal"> Login ID </div>
+					  <div class="horizontal_item"> <input type="text" ng-model="myForm.loginid" value="Enter Your user ID " size="10" ng-disabled="true"></div>
+				   </div>
+				    <div class="loginArea">
+					  <div class="horizontal"> Password</div>
+					  <div class="horizontal_item"><input type="password" ng-model="myForm.hashpassword" value="Enter Your Password" size="10" ng-disabled="true"></div>
+				   </div>
+				</div>
+				<div class="vertical_button">
+				   <div class="buttonArea">
+					  <div class="horizontal"> 
+						 <a ng-href=".\index"> <input type="button" value="Cancel"></a
+					  </div>
+					  <div class="horizontal">	<input type="submit" value="submit">
+
+					  </div>
+				   </div>
+				</div>
+			</div>
+           </form>
+      </div>
+	   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	   <script src="/javascripts/AppCtrl.js"></script>
+   </body>
+</html>

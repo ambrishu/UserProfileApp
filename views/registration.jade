@@ -1,0 +1,33 @@
+extends layout
+
+block content
+ .mainContainer
+    form(method='post', action='/registration_1')
+       input(type='hidden', name='Author', value='Ambrish U')							
+       .formContainer
+       .vertical
+         p(class="form_text") You can enter your Details here
+       .vertical
+         .horizontal
+           first Name Here :
+         .horizontal
+          input(type='text', name='firstname', value='Enter your First Name')
+       .vertical
+         .horizontal  Last name
+         .horizontal
+           input(type='text', name='lastname', value='Enter Your Last Name')
+       .vertical
+           .horizontal  Email Address
+           .horizontal
+             input(type='text', name='Email', value='Enter Your Email')
+       .vertical
+          .horizontal  Mobile Number
+          .horizontal
+             input(type='text', name='Mobile', value='Enter Your Mobile') 
+       .vertical_button
+          .buttonArea
+            .horizontal  
+              <input type="button" id="lilo_formCancel" value="Cancel" title="Cancel" onclick="">
+            .horizontal
+              <input type="button" id="lilo_formCancel" value="Submit" title="Submit" onclick="">
+         script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js')

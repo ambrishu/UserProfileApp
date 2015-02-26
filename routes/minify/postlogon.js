@@ -1,0 +1,1 @@
+var express=require("express"),router=express.Router();router.post("/loginsubmit",function(e,r){r.render("registration",{title:"Here you can register Your Self"})}),module.exports=router;

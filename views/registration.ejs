@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+   <head>
+      <link rel="stylesheet" href="/stylesheets/userProfile_1.css">
+   </head>
+   <body>
+      <div class="mainContainer" ng-controller="userRegistration" >
+         <form name="signup_form" ng-submit="submitRegistration()" >
+            <div class="formContainer">
+				<div class="vertical">
+				   <p class="form_text">You can enter your Details here</p>
+				   <div class="error-container"  ng-show="signup_form.firstName.$dirty && signup_form.firstName.$invalid">
+				   <small class="error"  ng-show="signup_form.firstName.$error.minlength"> <p style="color : red">Your name is required to be at least 3 characters </p></small>
+				   <small class="error"  ng-show="signup_form.firstName.$error.maxlength"><p style="color : red"> Your name cannot be longer than 20 characters </p>  </small>
+				   <small class="error"  ng-show="signup_form.firstName.$error.pattern"> <p style="color : red">Your name cannot be longer than 20 characters  </p> </small>
+				   <small class="error"  ng-show="signup_form.lastName.$error.minlength"> <p style="color : red">Your name is required to be at least 3 characters </p></small>
+				   <small class="error"  ng-show="signup_form.lastName.$error.maxlength"><p style="color : red"> Your name cannot be longer than 20 characters </p>  </small>
+				   <small class="error"  ng-show="signup_form.lastName.$error.pattern"> <p style="color : red">Your name cannot be longer than 20 characters  </p> </small>
+					<small class="error"  ng-show="signup_form.email.$error.minlength"> <p style="color : red">Your name is required to be at least 3 characters </p></small>
+				   <small class="error"  ng-show="signup_form.email.$error.maxlength"><p style="color : red"> Your name cannot be longer than 20 characters </p>  </small>
+				  
+				   </div>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal">
+					  <first>Name Here :</first>
+				   </div>
+				   <div class="horizontal_item"><input type="text" name="firstName"  ng-model="myForm.firstname" value="" size="10" ng-minlength=3  ng-maxlength=20 >
+				    </div>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal"> Last name</div>
+				   <div class="horizontal_item"><input type="text" name= "lastName" ng-model="myForm.lastname" value="" size="10" ng-minlength=3  ng-maxlength=20></div>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal"> Email Address</div>
+				   <div class="horizontal_item"><input type="email" name="email" ng-model="myForm.email" value="" size="10" ng-minlength=3  ng-maxlength=20></div>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal"> Mobile Number</div>
+				   <div class="horizontal_item"><input type="text" name= "mobiile" ng-model="myForm.mobile" value="" size="10"></div>
+				</div>
+				<div class="vertical">
+				   <div class="horizontal"> Upload Photo</div>
+				   <div class="horizontal_item"><input type="file" name= "file" ng-model="myForm.image" value=""  onchange="angular.element(this).scope().uploadFile(this.files)"></div>
+				</div>
+				<div class="vertical_loginarea">
+				   <div class="loginArea">
+					  <div class="horizontal"> Login ID </div>
+					  <div class="horizontal_item"> <input type="text" ng-model="myForm.loginid" value="Enter Your user ID " size="10"></div>
+				   </div>
+				    <div class="loginArea">
+					  <div class="horizontal"> Password</div>
+					  <div class="horizontal_item"><input type="password" ng-model="myForm.password" value="Enter Your Password" size="10"></div>
+				   </div>
+				</div>
+				<div class="vertical_button">
+				   <div class="buttonArea">
+					  <div class="horizontal"> 
+						<a ng-href=".\index"> <input type="button" value="Cancel"></a>
+					  </div>
+					  <div class="horizontal">	<input type="submit" value="submit">
+
+					  </div>
+				   </div>
+				</div>
+			</div>
+           </form>
+      </div>
+	   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	   <script src="/javascripts/AppCtrl.js"></script>
+   </body>
+</html>

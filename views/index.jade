@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+	<html ng-app="userProfile">
+	<head>
+		<title>User Profile</title>
+		<link rel="stylesheet" href="/stylesheets/userProfile_1.css">
+	</head>
+	<body>
+		<div class="mainContainer">
+		<form name="submitLogon" action="#" controller="AppCtrl">
+			<div display="hidden" class="horizontal"></div>
+			<div class="formContainer">
+				<div class="vertical">
+					<p class="form_text">You can enter your Login Details here</p>
+				</div>
+				<div class="vertical">
+					<div id="error_message" class="p hide">Please enter your correct User ID and Password 
+					</div>
+				</div>
+				<div class="vertical">
+					<div class="horizontal">
+						<Login>ID :</Login>
+					</div>
+					<div class="horizontal">
+						<input type="text" name="form.loginID" value="Enter your Login ID">
+					</div>
+				</div>
+				<div class="vertical">
+					<div class="horizontal"> Password
+					</div>
+					<div class="horizontal">
+						<input type="password" name="form.password" value="Password">
+					</div>
+				</div>
+				<div class="vertical">
+					<div class="buttonArea">
+						<a href="/registration">click here for Registration</a>
+					</div>
+				</div>
+				<div class="vertical_button">
+					<div class="buttonArea">
+						<div class="horizontal"> 
+						</div>
+						<div class="horizontal">
+							<input type="submit" ngClick="Submit">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<script type="text/javascript" src="/javascripts/AppCtrl.js"></script>
+	</body>
+</html>

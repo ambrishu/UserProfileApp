@@ -1,0 +1,23 @@
+<head>
+<link rel="stylesheet" href="/stylesheets/userProfile_1.css">
+</head>
+
+<body ng-app="myapp">
+<div class="mainContainer" ng-controller="MyController">
+<div class="top_centeralContainer"> 
+<div class="header_title">
+<p class="form_text">You are able to successfully loged in  as  <b><%=userFName%></B></p>
+</div>
+
+<div id="middle_centeralContainer"> 
+<p class="form_text">You can do following activities as logged in User </p>
+<ul> <a ng-href=".\updateProfile"> Update Profile </a> </ul>
+<ul> Delete Profile </ul>
+<ul> Find List of Profile </ul>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+<script src="/javascripts/AppCtrl.js"></script>
+
+</body >
+</html >
