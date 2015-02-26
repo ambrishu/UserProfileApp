@@ -1,0 +1,12 @@
+var cache={};
+
+var userProfile = { logindata : "", hashpassword : "", user : [ {firstName : "" , lastName : "" , emailID : "" , mobileNumber : "" }] };
+
+var addUser = function ( userProfile )
+
+{
+	var cache_size= cache.length;
+	cache_size++;
+	cache.cache_size++ = userProfile
+
+}
