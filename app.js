@@ -16,6 +16,7 @@ var app = express();
 app.set('views', path.join(__dirname, 'views/'));
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
+app.set('env',  process.env.NODE_ENV || 'development');
 
 //app.use(favicon());
 //app.use(logger('dev'));
